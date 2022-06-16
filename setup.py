@@ -1,16 +1,25 @@
 from setuptools import setup
 
-VERSION = '0.0.1'
-DESCRIPTION = 'A Huggingface style trainer for graph neural network models'
+DISTNAME = 'gnn-trainer'
+DESCRIPTION = 'A HuggingFace style trainer for graph neural network models'
+MAINTAINER = 'Joshua Melton'
+MAINTAINER_EMAIL = 'jmelto30@uncc.edu'
+URL = 'https://github.com/NASCL/gnn-trainer'
+LICENSE = 'MIT'
+
+import gnn_trainer
+
+VERSION = gnn_trainer.__version__
 
 setup(
-    name='gnn-trainer',
+    name=DISTNAME,
     version=VERSION,
     description=DESCRIPTION,
-    author='Joshua Melton',
-    author_email='jmelto30@uncc.edu',
+    author=MAINTAINER,
+    author_email=MAINTAINER_EMAIL,
+    license=LICENSE,
     keywords=['pytorch', 'graph machine learning', 'graph representation learning', 'graph neural networks'],
-    packages=['gnn-trainer'],
+    packages=['gnn_trainer'],
     include_package_data=True,
     install_requires=[
         'numpy>=1.16.0',
